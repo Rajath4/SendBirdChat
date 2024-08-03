@@ -256,10 +256,50 @@ export const statefyDirectCall = (
     startScreenShare() {
       return call.startScreenShare();
     },
-    
+
     stopScreenShare() {
       return call.stopScreenShare();
     },
+
+    captureLocalVideoView(callback) {
+      return call.captureLocalVideoView(callback);
+    },
+    captureRemoteVideoView(callback) {
+      return call.captureRemoteVideoView(callback);
+    },
+    updateCustomItems(customItems, callback) {
+      return call.updateCustomItems(customItems, callback);
+    },
+    deleteCustomItems(customItemsKeys, callback) {
+      return call.deleteCustomItems(customItemsKeys, callback);
+    },
+    deleteAllCustomItems(callback) {
+      return call.deleteAllCustomItems(callback);
+    },
+    startRecording(options) {
+      return call.startRecording(options);
+    },
+    stopRecording(recordId) {
+      return call.stopRecording(recordId);
+    },
+
+    onEstablished: call.onEstablished,
+    onConnected: call.onConnected,
+    onReconnected: call.onReconnected,
+    onReconnecting: call.onReconnecting,
+    onRemoteAudioSettingsChanged: call.onRemoteAudioSettingsChanged,
+    onRemoteVideoSettingsChanged: call.onRemoteVideoSettingsChanged,
+    onCustomItemsUpdated: call.onCustomItemsUpdated,
+    onCustomItemsDeleted: call.onCustomItemsDeleted,
+    onRemoteRecordingStatusChanged: call.onRemoteRecordingStatusChanged,
+    onEnded: call.onEnded,
+    onScreenShareStopped: call.onScreenShareStopped,
+    callLog: call.callLog,
+    customItems: call.customItems,
+    localRecordingStatus: call.localRecordingStatus,
+    remoteRecordingStatus: call.remoteRecordingStatus,
+    isLocalScreenShareEnabled: call.isLocalScreenShareEnabled,
+
 
     // captureLocalVideoView(callback?) {
     //   return call.captureLocalVideoView(callback);
